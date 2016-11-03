@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qbK-7N-eNo">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11508"/>
+    </dependencies>
+    <scenes>
+        <!--Table Interface Controller-->
+        <scene sceneID="Ev8-bZ-6Tt">
+            <objects>
+                <controller id="qbK-7N-eNo" customClass="TableInterfaceController">
+                    <items>
+                        <table alignment="left" id="9nx-Ju-hXe">
+                            <items>
+                                <tableRow id="0ez-Nr-eNC" customClass="FavoriteRowController">
+                                    <group key="rootItem" width="1" alignment="left" id="Khe-hq-KR6">
+                                        <items>
+                                            <label alignment="left" text="Label" id="v23-X2-xxE"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="RowLabel" destination="v23-X2-xxE" id="McQ-KP-PWq"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <color key="backgroundColor" red="0.079750782909999998" green="0.26499100129999997" blue="0.071154093459999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="Table" destination="9nx-Ju-hXe" id="YEx-OU-jMZ"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-421" y="-614"/>
+        </scene>
+        <!--View3-->
+        <scene sceneID="3nv-jA-lIA">
+            <objects>
+                <controller identifier="View3" id="0zu-Oc-szF">
+                    <color key="backgroundColor" red="0.97647058819999999" green="0.031372549020000001" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-146" y="-614"/>
+        </scene>
+        <!--View2-->
+        <scene sceneID="PIs-In-5tg">
+            <objects>
+                <controller identifier="View2" id="Uqr-JQ-P5Y">
+                    <color key="backgroundColor" red="0.36071930660000001" green="0.082996540990000006" blue="0.71154960040000004" alpha="1" colorSpace="calibratedRGB"/>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-146" y="-325"/>
+        </scene>
+        <!--Glance Interface Controller-->
+        <scene sceneID="BOz-TT-tkC">
+            <objects>
+                <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController">
+                    <items>
+                        <group alignment="left" id="t8f-Gd-c4y"/>
+                        <group alignment="left" id="uCw-4Q-Ouw"/>
+                    </items>
+                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
+                </glanceController>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="263"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="XkS-y5-khE"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="XkS-y5-khE" id="49B-RR-99y"/>
+                        <segue destination="gdX-wl-uQE" kind="relationship" relationship="dynamicNotificationInterface" id="fKh-qV-3T2"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="KIl-fV-djm">
+            <objects>
+                <controller id="gdX-wl-uQE" customClass="NotificationController"/>
+            </objects>
+            <point key="canvasLocation" x="325" y="0.0"/>
+        </scene>
+    </scenes>
+</document>
