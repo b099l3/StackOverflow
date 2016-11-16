@@ -28,7 +28,7 @@
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
     <MtouchTlsProvider>Default</MtouchTlsProvider>
     <PlatformTarget>x86</PlatformTarget>
-    <MtouchExtraArgs>-gcc_flags "-F/Applications/Reveal.app/Contents/SharedSupport/iOS-Libraries -all_load -ObjC -framework Reveal -framework QuartzCore -framework CFNetwork"</MtouchExtraArgs>
+    <MtouchExtraArgs></MtouchExtraArgs>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>pdbonly</DebugType>
