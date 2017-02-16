@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectGuid>{0CF1FE93-B895-497B-9BA7-2BC55ADD3A26}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>CustomActivitySpinner</RootNamespace>
+    <AssemblyName>CustomActivitySpinner</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <IOSDebuggerPort>44172</IOSDebuggerPort>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Resources\Assets.xcassets\frame_0.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_0.imageset\frame_0.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_1.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_1.imageset\frame_1.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_10.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_10.imageset\frame_10.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_11.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_11.imageset\frame_11.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_12.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_12.imageset\frame_12.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_13.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_13.imageset\frame_13.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_14.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_14.imageset\frame_14.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_15.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_15.imageset\frame_15.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_16.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_16.imageset\frame_16.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_17.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_17.imageset\frame_17.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_18.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_18.imageset\frame_18.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_19.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_19.imageset\frame_19.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_2.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_2.imageset\frame_2.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_20.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_20.imageset\frame_20.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_21.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_21.imageset\frame_21.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_22.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_22.imageset\frame_22.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_23.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_23.imageset\frame_23.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_24.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_24.imageset\frame_24.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_25.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_25.imageset\frame_25.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_26.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_26.imageset\frame_26.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_27.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_27.imageset\frame_27.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_28.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_28.imageset\frame_28.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_29.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_29.imageset\frame_29.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_3.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_3.imageset\frame_3.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_30.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_30.imageset\frame_30.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_31.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_31.imageset\frame_31.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_32.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_32.imageset\frame_32.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_33.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_33.imageset\frame_33.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_34.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_34.imageset\frame_34.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_35.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_35.imageset\frame_35.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_36.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_36.imageset\frame_36.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_37.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_37.imageset\frame_37.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_38.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_38.imageset\frame_38.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_39.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_39.imageset\frame_39.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_4.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_4.imageset\frame_4.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_5.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_5.imageset\frame_5.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_6.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_6.imageset\frame_6.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_7.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_7.imageset\frame_7.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_8.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_8.imageset\frame_8.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_9.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\frame_9.imageset\frame_9.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame0.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame0.imageset\Frame0.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame1.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame1.imageset\Frame1.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame10.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame10.imageset\Frame10.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame11.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame11.imageset\Frame11.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame12.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame12.imageset\Frame12.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame13.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame13.imageset\Frame13.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame14.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame14.imageset\Frame14.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame15.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame15.imageset\Frame15.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame16.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame16.imageset\Frame16.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame17.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame17.imageset\Frame17.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame18.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame18.imageset\Frame18.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame19.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame19.imageset\Frame19.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame2.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame2.imageset\Frame2.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame20.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame20.imageset\Frame20.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame21.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame21.imageset\Frame21.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame22.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame22.imageset\Frame22.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame23.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame23.imageset\Frame23.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame24.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame24.imageset\Frame24.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame25.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame25.imageset\Frame25.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame26.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame26.imageset\Frame26.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame27.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame27.imageset\Frame27.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame28.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame28.imageset\Frame28.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame29.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame29.imageset\Frame29.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame3.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame3.imageset\Frame3.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame30.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame30.imageset\Frame30.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame31.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame31.imageset\Frame31.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame32.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame32.imageset\Frame32.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame33.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame33.imageset\Frame33.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame34.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame34.imageset\Frame34.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame35.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame35.imageset\Frame35.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame36.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame36.imageset\Frame36.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame37.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame37.imageset\Frame37.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame38.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame38.imageset\Frame38.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame39.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame39.imageset\Frame39.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame4.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame4.imageset\Frame4.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame5.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame5.imageset\Frame5.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame6.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame6.imageset\Frame6.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame7.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame7.imageset\Frame7.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame8.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame8.imageset\Frame8.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame9.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\Frame9.imageset\Frame9.png" />
+    <ImageAsset Include="Assets.xcassets\.DS_Store" />
+    <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Frame0.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Frame0.imageset\Frame0.png" />
+    <ImageAsset Include="Assets.xcassets\Frame1.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Frame1.imageset\Frame1.png" />
+    <ImageAsset Include="Assets.xcassets\Frame10.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Frame10.imageset\Frame10.png" />
+    <ImageAsset Include="Assets.xcassets\Frame11.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Frame11.imageset\Frame11.png" />
+    <ImageAsset Include="Assets.xcassets\Frame12.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Frame12.imageset\Frame12.png" />
+    <ImageAsset Include="Assets.xcassets\Frame13.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Frame13.imageset\Frame13.png" />
+    <ImageAsset Include="Assets.xcassets\Frame14.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Frame14.imageset\Frame14.png" />
+    <ImageAsset Include="Assets.xcassets\Frame15.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Frame15.imageset\Frame15.png" />
+    <ImageAsset Include="Assets.xcassets\Frame16.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Frame16.imageset\Frame16.png" />
+    <ImageAsset Include="Assets.xcassets\Frame17.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Frame17.imageset\Frame17.png" />
+    <ImageAsset Include="Assets.xcassets\Frame18.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Frame18.imageset\Frame18.png" />
+    <ImageAsset Include="Assets.xcassets\Frame19.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Frame19.imageset\Frame19.png" />
+    <ImageAsset Include="Assets.xcassets\Frame2.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Frame2.imageset\Frame2.png" />
+    <ImageAsset Include="Assets.xcassets\Frame20.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Frame20.imageset\Frame20.png" />
+    <ImageAsset Include="Assets.xcassets\Frame21.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Frame21.imageset\Frame21.png" />
+    <ImageAsset Include="Assets.xcassets\Frame22.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Frame22.imageset\Frame22.png" />
+    <ImageAsset Include="Assets.xcassets\Frame23.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Frame23.imageset\Frame23.png" />
+    <ImageAsset Include="Assets.xcassets\Frame24.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Frame24.imageset\Frame24.png" />
+    <ImageAsset Include="Assets.xcassets\Frame25.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Frame25.imageset\Frame25.png" />
+    <ImageAsset Include="Assets.xcassets\Frame26.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Frame26.imageset\Frame26.png" />
+    <ImageAsset Include="Assets.xcassets\Frame27.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Frame27.imageset\Frame27.png" />
+    <ImageAsset Include="Assets.xcassets\Frame28.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Frame28.imageset\Frame28.png" />
+    <ImageAsset Include="Assets.xcassets\Frame29.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Frame29.imageset\Frame29.png" />
+    <ImageAsset Include="Assets.xcassets\Frame3.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Frame3.imageset\Frame3.png" />
+    <ImageAsset Include="Assets.xcassets\Frame30.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Frame30.imageset\Frame30.png" />
+    <ImageAsset Include="Assets.xcassets\Frame31.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Frame31.imageset\Frame31.png" />
+    <ImageAsset Include="Assets.xcassets\Frame32.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Frame32.imageset\Frame32.png" />
+    <ImageAsset Include="Assets.xcassets\Frame33.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Frame33.imageset\Frame33.png" />
+    <ImageAsset Include="Assets.xcassets\Frame34.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Frame34.imageset\Frame34.png" />
+    <ImageAsset Include="Assets.xcassets\Frame35.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Frame35.imageset\Frame35.png" />
+    <ImageAsset Include="Assets.xcassets\Frame36.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Frame36.imageset\Frame36.png" />
+    <ImageAsset Include="Assets.xcassets\Frame37.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Frame37.imageset\Frame37.png" />
+    <ImageAsset Include="Assets.xcassets\Frame38.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Frame38.imageset\Frame38.png" />
+    <ImageAsset Include="Assets.xcassets\Frame39.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Frame39.imageset\Frame39.png" />
+    <ImageAsset Include="Assets.xcassets\Frame4.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Frame4.imageset\Frame4.png" />
+    <ImageAsset Include="Assets.xcassets\Frame5.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Frame5.imageset\Frame5.png" />
+    <ImageAsset Include="Assets.xcassets\Frame6.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Frame6.imageset\Frame6.png" />
+    <ImageAsset Include="Assets.xcassets\Frame7.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Frame7.imageset\Frame7.png" />
+    <ImageAsset Include="Assets.xcassets\Frame8.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Frame8.imageset\Frame8.png" />
+    <ImageAsset Include="Assets.xcassets\Frame9.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Frame9.imageset\Frame9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="LaunchScreen.storyboard" />
+    <InterfaceDefinition Include="Main.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="ViewController.cs" />
+    <Compile Include="ViewController.designer.cs">
+      <DependentUpon>ViewController.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\.DS_Store" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+</Project>

@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomActivitySpinner", "CustomActivitySpinner\CustomActivitySpinner.csproj", "{0CF1FE93-B895-497B-9BA7-2BC55ADD3A26}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhone = Release|iPhone
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0CF1FE93-B895-497B-9BA7-2BC55ADD3A26}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{0CF1FE93-B895-497B-9BA7-2BC55ADD3A26}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{0CF1FE93-B895-497B-9BA7-2BC55ADD3A26}.Release|iPhone.ActiveCfg = Release|iPhone
+		{0CF1FE93-B895-497B-9BA7-2BC55ADD3A26}.Release|iPhone.Build.0 = Release|iPhone
+		{0CF1FE93-B895-497B-9BA7-2BC55ADD3A26}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{0CF1FE93-B895-497B-9BA7-2BC55ADD3A26}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{0CF1FE93-B895-497B-9BA7-2BC55ADD3A26}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{0CF1FE93-B895-497B-9BA7-2BC55ADD3A26}.Debug|iPhone.Build.0 = Debug|iPhone
+	EndGlobalSection
+EndGlobal
